@@ -1,5 +1,5 @@
 site_name: Pioupiou for Devs
-site_url: http://developers.pioupiou.fr
+site_url: http://developers.openwindmap.org
 site_description: Documentation for Pioupiou API
 site_author: Nicolas Baldeck
 
@@ -17,7 +17,7 @@ pages:
 - More:
   - Get support: support.md
 #  - Usage policy: usage-policy.md
-#  - Service status: http://status.pioupiou.fr
+#  - Service status: http://status.openwindmap.org
   - Bug tracker: bug-tracker.md
   - Contribute: contribute.md
 

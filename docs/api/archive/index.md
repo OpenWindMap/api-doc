@@ -11,7 +11,7 @@ To use data from Pioupiou stations, you must comply with the license available o
 
 ## Endpoint
 ```bash
-GET http://api.pioupiou.fr/v1/archive/{station_id}?start={start}&stop={stop}&format={format}
+GET http://api.openwindmap.org/v1/archive/{station_id}?start={start}&stop={stop}&format={format}
 ```
 ## Arguments
 
@@ -56,13 +56,13 @@ The **Live** API provides JSON responses.
 #### May 2015, JSON
 
 ```bash
-$ curl "http://api.pioupiou.fr/v1/archive/1?start=2015-05&stop=2015-06"
+$ curl "http://api.openwindmap.org/v1/archive/1?start=2015-05&stop=2015-06"
 ```
 ```json
 {
-  "doc": "http://developers.pioupiou.fr/api/archive/",
-  "license": "http://developers.pioupiou.fr/data-licensing",
-  "attribution": "(c) contributors of the Pioupiou wind network <http://pioupiou.fr>",
+  "doc": "http://developers.openwindmap.org/api/archive/",
+  "license": "http://developers.openwindmap.org/data-licensing",
+  "attribution": "(c) contributors of the Pioupiou wind network <http://openwindmap.org>",
   "legend": ["time","latitude","longitude","wind_speed_min","wind_speed_avg","wind_speed_max","wind_heading","pressure"],
   "units": ["utc","degrees","degrees","km/h","km/h","km/h","degrees","(deprecated)"],
   "data": [
@@ -85,13 +85,13 @@ $ curl "http://api.pioupiou.fr/v1/archive/1?start=2015-05&stop=2015-06"
 #### Last hour, JSON
 
 ```bash
-$ curl "http://api.pioupiou.fr/v1/archive/110?start=last-hour&stop=now"
+$ curl "http://api.openwindmap.org/v1/archive/110?start=last-hour&stop=now"
 ```
 ```json
 {
-  "doc": "http://developers.pioupiou.fr/api/archive/",
-  "license": "http://developers.pioupiou.fr/data-licensing",
-  "attribution": "(c) contributors of the Pioupiou wind network <http://pioupiou.fr>",
+  "doc": "http://developers.openwindmap.org/api/archive/",
+  "license": "http://developers.openwindmap.org/data-licensing",
+  "attribution": "(c) contributors of the Pioupiou wind network <http://openwindmap.org>",
   "legend": ["time","latitude","longitude","wind_speed_min","wind_speed_avg","wind_speed_max","wind_heading","pressure"],
   "units": ["utc","degrees","degrees","km/h","km/h","km/h","degrees","(deprecated)"],
   "data": [
@@ -114,11 +114,11 @@ $ curl "http://api.pioupiou.fr/v1/archive/110?start=last-hour&stop=now"
 #### Last hour, csv
 
 ```bash
-$ curl "http://api.pioupiou.fr/v1/archive/110?start=last-hour&stop=now&format=csv"
+$ curl "http://api.openwindmap.org/v1/archive/110?start=last-hour&stop=now&format=csv"
 ```
 ```no-highlight
-"License","http://developers.pioupiou.fr/data-licensing"
-"Attribution","(c) contributors of the Pioupiou wind network <http://pioupiou.fr>"
+"License","http://developers.openwindmap.org/data-licensing"
+"Attribution","(c) contributors of the Pioupiou wind network <http://openwindmap.org>"
 "time","latitude","longitude","wind_speed_min","wind_speed_avg","wind_speed_max","wind_heading","pressure"
 "utc","degrees","degrees","km/h","km/h","km/h","degrees","(deprecated)"
 "2015-08-18T12:48:23.000Z",51.368464,3.458852,1,10,17.5,247.5,null
@@ -139,11 +139,11 @@ $ curl "http://api.pioupiou.fr/v1/archive/110?start=last-hour&stop=now&format=cs
 #### Last hour, tabulation-separated text
 
 ```bash
-$ curl "http://api.pioupiou.fr/v1/archive/110?start=last-hour&stop=now&format=txt"
+$ curl "http://api.openwindmap.org/v1/archive/110?start=last-hour&stop=now&format=txt"
 ```
 ```no-highlight
-License:        http://developers.pioupiou.fr/data-licensing
-Attribution:    (c) contributors of the Pioupiou wind network <http://pioupiou.fr>
+License:        http://developers.openwindmap.org/data-licensing
+Attribution:    (c) contributors of the Pioupiou wind network <http://openwindmap.org>
 time    latitude        longitude       wind_speed_min  wind_speed_avg  wind_speed_max  wind_heading    pressure
 utc     degrees degrees km/h    km/h    km/h    degrees (deprecated)
 2015-08-18T12:48:23.000Z        51.368464       3.458852        1       10      17.5    247.5   null
@@ -169,7 +169,7 @@ HTTP status code other than ```200``` means that an error has occured.
 In most cases the application will return a JSON object, including details about the error.
 
 ```bash
-$ curl -i "http://api.pioupiou.fr/v1/archive/999999?start=last-hour&stop=now"
+$ curl -i "http://api.openwindmap.org/v1/archive/999999?start=last-hour&stop=now"
 ```
 ```json
 HTTP/1.1 404 Not Found
@@ -203,16 +203,16 @@ When output format is JSON, JSONP is also supported, even if its use is no longe
 The name of the callback function must be placed in query string ```callback``` argument:
 
 ```bash
-curl -i "http://api.pioupiou.fr/v1/archive/110?start=last-hour&stop=now&callback=myCallBackFunction"
+curl -i "http://api.openwindmap.org/v1/archive/110?start=last-hour&stop=now&callback=myCallBackFunction"
 ```
 ```json
 HTTP/1.1 200 OK
 Content-Type: text/javascript; charset=utf-8
 
 /**/ typeof myCallBackFunction === 'function' && myCallBackFunction({
-  "doc": "http://developers.pioupiou.fr/api/archive/",
-  "license": "http://developers.pioupiou.fr/data-licensing",
-  "attribution": "(c) contributors of the Pioupiou wind network <http://pioupiou.fr>",
+  "doc": "http://developers.openwindmap.org/api/archive/",
+  "license": "http://developers.openwindmap.org/data-licensing",
+  "attribution": "(c) contributors of the Pioupiou wind network <http://openwindmap.org>",
   "legend": ["time","latitude","longitude","wind_speed_min","wind_speed_avg","wind_speed_max","wind_heading","pressure"],
   "units": ["utc","degrees","degrees","km/h","km/h","km/h","degrees","(deprecated)"],
   "data": [

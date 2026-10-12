@@ -8,11 +8,11 @@ To use data from Pioupiou stations, you must comply with the license available o
 ## Endpoints
 ```bash
 # latest measurements only
-GET http://api.pioupiou.fr/v1/live/{station_id}
+GET http://api.openwindmap.org/v1/live/{station_id}
 ```
 ```bash
 # latest measurements with complete metadata
-GET http://api.pioupiou.fr/v1/live-with-meta/{station_id}
+GET http://api.openwindmap.org/v1/live-with-meta/{station_id}
 ```
 ## Arguments
 ```bash
@@ -33,13 +33,13 @@ The **Live** API provides JSON responses.
 #### Single station, latest measurements only
 
 ```bash
-$ curl "http://api.pioupiou.fr/v1/live/110"
+$ curl "http://api.openwindmap.org/v1/live/110"
 ```
 ```json
 {
-  "doc": "http://developers.pioupiou.fr/api/live/",
-  "license": "http://developers.pioupiou.fr/data-licensing",
-  "attribution": "(c) contributors of the Pioupiou wind network <http://pioupiou.fr>",
+  "doc": "http://developers.openwindmap.org/api/live/",
+  "license": "http://developers.openwindmap.org/data-licensing",
+  "attribution": "(c) contributors of the Pioupiou wind network <http://openwindmap.org>",
   "data": {
     "id": 110,
     "meta": {
@@ -72,13 +72,13 @@ $ curl "http://api.pioupiou.fr/v1/live/110"
 #### Single station, latest measurements with complete metadata
 
 ```bash
-$ curl "http://api.pioupiou.fr/v1/live-with-meta/110"
+$ curl "http://api.openwindmap.org/v1/live-with-meta/110"
 ```
 ```json
 {
-  "doc": "http://developers.pioupiou.fr/api/live/",
-  "license": "http://developers.pioupiou.fr/data-licensing",
-  "attribution": "(c) contributors of the Pioupiou wind network <http://pioupiou.fr>",
+  "doc": "http://developers.openwindmap.org/api/live/",
+  "license": "http://developers.openwindmap.org/data-licensing",
+  "attribution": "(c) contributors of the Pioupiou wind network <http://openwindmap.org>",
   "data": {
     "id": 110,
     "meta": {
@@ -116,13 +116,13 @@ $ curl "http://api.pioupiou.fr/v1/live-with-meta/110"
 #### All stations, latest measurements only
 
 ```bash
-$ curl "http://api.pioupiou.fr/v1/live/all"
+$ curl "http://api.openwindmap.org/v1/live/all"
 ```
 ```json
 {
-  "doc": "http://developers.pioupiou.fr/api/live/",
-  "license": "http://developers.pioupiou.fr/data-licensing",
-  "attribution": "(c) contributors of the Pioupiou wind network <http://pioupiou.fr>",
+  "doc": "http://developers.openwindmap.org/api/live/",
+  "license": "http://developers.openwindmap.org/data-licensing",
+  "attribution": "(c) contributors of the Pioupiou wind network <http://openwindmap.org>",
   "data": [
     {
       "id": 1,
@@ -184,13 +184,13 @@ $ curl "http://api.pioupiou.fr/v1/live/all"
 #### All stations, latest measurements with complete metadata
 
 ```bash
-$ curl "http://api.pioupiou.fr/v1/live-with-meta/all"
+$ curl "http://api.openwindmap.org/v1/live-with-meta/all"
 ```
 ```json
 {
-  "doc": "http://developers.pioupiou.fr/api/live/",
-  "license": "http://developers.pioupiou.fr/data-licensing",
-  "attribution": "(c) contributors of the Pioupiou wind network <http://pioupiou.fr>",
+  "doc": "http://developers.openwindmap.org/api/live/",
+  "license": "http://developers.openwindmap.org/data-licensing",
+  "attribution": "(c) contributors of the Pioupiou wind network <http://openwindmap.org>",
   "data": [
     {
       "id": 1,
@@ -299,7 +299,7 @@ HTTP status code other than ```200``` means that an error has occured.
 In most cases the application will return a JSON object, including details about the error.
 
 ```bash
-$ curl -i "http://api.pioupiou.fr/v1/live/999999"
+$ curl -i "http://api.openwindmap.org/v1/live/999999"
 ```
 ```json
 HTTP/1.1 404 Not Found
@@ -331,16 +331,16 @@ JSONP is also supported, even if its use is no longer encouraged.
 The name of the callback function must be placed in query string ```callback``` argument:
 
 ```bash
-$ curl -i "http://api.pioupiou.fr/v1/live/1?callback=myCallBackFunction"
+$ curl -i "http://api.openwindmap.org/v1/live/1?callback=myCallBackFunction"
 ```
 ```json
 HTTP/1.1 200 OK
 Content-Type: text/javascript; charset=utf-8
 
 /**/ typeof myCallBackFunction === 'function' && myCallBackFunction({
-  "doc": "http://developers.pioupiou.fr/api/live/",
-  "license": "http://pioupiou.fr/license/data",
-  "attribution": "(c) contributors of the Pioupiou wind network <http://pioupiou.fr>",
+  "doc": "http://developers.openwindmap.org/api/live/",
+  "license": "http://openwindmap.org/license/data",
+  "attribution": "(c) contributors of the Pioupiou wind network <http://openwindmap.org>",
   "data": {
     "id": 1,
     "meta": {
