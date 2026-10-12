@@ -7,7 +7,7 @@ A single request can retrieve data for up to 31 days.
 Output format can be either **JSON**, **csv** or tab-separated **text file**.
 
 ## License
-To use data from Pioupiou stations, you must comply with the license available on the [Data Licensing](../../data-licensing.md) page.
+To use data from Openwindmap stations, you must comply with the license available on the [Data Licensing](../../data-licensing.md) page.
 
 ## Endpoint
 ```bash
@@ -62,7 +62,7 @@ $ curl "http://api.openwindmap.org/v1/archive/1?start=2015-05&stop=2015-06"
 {
   "doc": "http://developers.openwindmap.org/api/archive/",
   "license": "http://developers.openwindmap.org/data-licensing",
-  "attribution": "(c) contributors of the Pioupiou wind network <http://openwindmap.org>",
+  "attribution": "(c) contributors of the Openwindmap wind network <http://openwindmap.org>",
   "legend": ["time","latitude","longitude","wind_speed_min","wind_speed_avg","wind_speed_max","wind_heading","pressure"],
   "units": ["utc","degrees","degrees","km/h","km/h","km/h","degrees","(deprecated)"],
   "data": [
@@ -91,7 +91,7 @@ $ curl "http://api.openwindmap.org/v1/archive/110?start=last-hour&stop=now"
 {
   "doc": "http://developers.openwindmap.org/api/archive/",
   "license": "http://developers.openwindmap.org/data-licensing",
-  "attribution": "(c) contributors of the Pioupiou wind network <http://openwindmap.org>",
+  "attribution": "(c) contributors of the Openwindmap wind network <http://openwindmap.org>",
   "legend": ["time","latitude","longitude","wind_speed_min","wind_speed_avg","wind_speed_max","wind_heading","pressure"],
   "units": ["utc","degrees","degrees","km/h","km/h","km/h","degrees","(deprecated)"],
   "data": [
@@ -118,7 +118,7 @@ $ curl "http://api.openwindmap.org/v1/archive/110?start=last-hour&stop=now&forma
 ```
 ```no-highlight
 "License","http://developers.openwindmap.org/data-licensing"
-"Attribution","(c) contributors of the Pioupiou wind network <http://openwindmap.org>"
+"Attribution","(c) contributors of the Openwindmap wind network <http://openwindmap.org>"
 "time","latitude","longitude","wind_speed_min","wind_speed_avg","wind_speed_max","wind_heading","pressure"
 "utc","degrees","degrees","km/h","km/h","km/h","degrees","(deprecated)"
 "2015-08-18T12:48:23.000Z",51.368464,3.458852,1,10,17.5,247.5,null
@@ -143,7 +143,7 @@ $ curl "http://api.openwindmap.org/v1/archive/110?start=last-hour&stop=now&forma
 ```
 ```no-highlight
 License:        http://developers.openwindmap.org/data-licensing
-Attribution:    (c) contributors of the Pioupiou wind network <http://openwindmap.org>
+Attribution:    (c) contributors of the Openwindmap wind network <http://openwindmap.org>
 time    latitude        longitude       wind_speed_min  wind_speed_avg  wind_speed_max  wind_heading    pressure
 utc     degrees degrees km/h    km/h    km/h    degrees (deprecated)
 2015-08-18T12:48:23.000Z        51.368464       3.458852        1       10      17.5    247.5   null
@@ -212,7 +212,7 @@ Content-Type: text/javascript; charset=utf-8
 /**/ typeof myCallBackFunction === 'function' && myCallBackFunction({
   "doc": "http://developers.openwindmap.org/api/archive/",
   "license": "http://developers.openwindmap.org/data-licensing",
-  "attribution": "(c) contributors of the Pioupiou wind network <http://openwindmap.org>",
+  "attribution": "(c) contributors of the Openwindmap wind network <http://openwindmap.org>",
   "legend": ["time","latitude","longitude","wind_speed_min","wind_speed_avg","wind_speed_max","wind_heading","pressure"],
   "units": ["utc","degrees","degrees","km/h","km/h","km/h","degrees","(deprecated)"],
   "data": [

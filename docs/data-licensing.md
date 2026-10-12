@@ -2,7 +2,7 @@
 
 If you want to access the measurements of your own station, go ahead! It's yours so you can do whatever you want with it.
 
-If you want to access the data from every Pioupiou station, you have a choice of 2 different licenses:
+If you want to access the data from every Openwindmap station, you have a choice of 2 different licenses:
 
 * The **Community License** is free (and will always be). It is designed for open data projects.
 * The **Extended License** is more permissive. It can be tailored to your needs.
@@ -12,7 +12,7 @@ If you want to access the data from every Pioupiou station, you have a choice of
 
 The **Community License** is free and requires no registration.
 
-It allows you to use the data from all the sensors of the Pioupiou Wind Network, for any use − including commercial use −, as long as you comply with the following rules:
+It allows you to use the data from all the sensors of the Openwindmap Wind Network, for any use − including commercial use −, as long as you comply with the following rules:
 
 ### Attribution
 
@@ -28,7 +28,7 @@ You must not claim that you are the owner of the original data.
 
 If your application integrates data from other weather sensors, the data from those other weather sensors must be open, according to the following definition.
 
-If your application integrates data from other weather sensors, and if the data from those other weather sensors is not open according to the following definition, then you are not allowed to use Pioupiou Wind Data under the **Community License**. In this case, you may contact us for an **Extended License**.
+If your application integrates data from other weather sensors, and if the data from those other weather sensors is not open according to the following definition, then you are not allowed to use Openwindmap Wind Data under the **Community License**. In this case, you may contact us for an **Extended License**.
 
 #### Definition of **open** data :
 

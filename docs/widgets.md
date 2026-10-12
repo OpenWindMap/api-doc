@@ -30,7 +30,7 @@ You can add as many widgets as you want on the same page.
 <div class="owm-widget" data-id="WB1399"></div>
 
 
-#### Display live wind and 2 h history graph for Pioupiou n°641:
+#### Display live wind and 2 h history graph for Openwindmap n°641:
 ```html
 <div
   class="owm-widget"

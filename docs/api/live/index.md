@@ -3,7 +3,7 @@
 The Live API provides access to the latest measurements from **one station** or **all stations**.
 
 ## License
-To use data from Pioupiou stations, you must comply with the license available on the [Data Licensing](../../data-licensing.md) page.
+To use data from Openwindmap stations, you must comply with the license available on the [Data Licensing](../../data-licensing.md) page.
 
 ## Endpoints
 ```bash
@@ -39,7 +39,7 @@ $ curl "http://api.openwindmap.org/v1/live/110"
 {
   "doc": "http://developers.openwindmap.org/api/live/",
   "license": "http://developers.openwindmap.org/data-licensing",
-  "attribution": "(c) contributors of the Pioupiou wind network <http://openwindmap.org>",
+  "attribution": "(c) contributors of the Openwindmap wind network <http://openwindmap.org>",
   "data": {
     "id": 110,
     "meta": {
@@ -78,7 +78,7 @@ $ curl "http://api.openwindmap.org/v1/live-with-meta/110"
 {
   "doc": "http://developers.openwindmap.org/api/live/",
   "license": "http://developers.openwindmap.org/data-licensing",
-  "attribution": "(c) contributors of the Pioupiou wind network <http://openwindmap.org>",
+  "attribution": "(c) contributors of the Openwindmap wind network <http://openwindmap.org>",
   "data": {
     "id": 110,
     "meta": {
@@ -122,7 +122,7 @@ $ curl "http://api.openwindmap.org/v1/live/all"
 {
   "doc": "http://developers.openwindmap.org/api/live/",
   "license": "http://developers.openwindmap.org/data-licensing",
-  "attribution": "(c) contributors of the Pioupiou wind network <http://openwindmap.org>",
+  "attribution": "(c) contributors of the Openwindmap wind network <http://openwindmap.org>",
   "data": [
     {
       "id": 1,
@@ -190,7 +190,7 @@ $ curl "http://api.openwindmap.org/v1/live-with-meta/all"
 {
   "doc": "http://developers.openwindmap.org/api/live/",
   "license": "http://developers.openwindmap.org/data-licensing",
-  "attribution": "(c) contributors of the Pioupiou wind network <http://openwindmap.org>",
+  "attribution": "(c) contributors of the Openwindmap wind network <http://openwindmap.org>",
   "data": [
     {
       "id": 1,
@@ -340,7 +340,7 @@ Content-Type: text/javascript; charset=utf-8
 /**/ typeof myCallBackFunction === 'function' && myCallBackFunction({
   "doc": "http://developers.openwindmap.org/api/live/",
   "license": "http://openwindmap.org/license/data",
-  "attribution": "(c) contributors of the Pioupiou wind network <http://openwindmap.org>",
+  "attribution": "(c) contributors of the Openwindmap wind network <http://openwindmap.org>",
   "data": {
     "id": 1,
     "meta": {

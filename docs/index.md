@@ -1,8 +1,8 @@
-# Pioupiou for Developers
+# Openwindmap for Developers
 
-Welcome to the Pioupiou developers portal.
+Welcome to the Openwindmap developers portal.
 
-From the inception, Pioupiou was built with the idea of making its data available in an open and easily reusable way.
+From the inception, Openwindmap was built with the idea of making its data available in an open and easily reusable way.
 
 We believe that the value is not the data, but the innovative uses **you** will create from it.
 
@@ -23,7 +23,7 @@ For advanced use:
 
 ## License
 
-To use data from Pioupiou stations, you must comply with the license available on the [Data Licensing] page.
+To use data from Openwindmap stations, you must comply with the license available on the [Data Licensing] page.
 
 [Widgets]: widgets.md
 [Live]: api/live/index.md
