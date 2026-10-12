@@ -61,4 +61,4 @@ We will not be liable for any consequential, incidental, or special damages, or 
 
 The **Extended License** can be adjusted to fit your needs.
 
-Contact us on the forum ([https://forum.openwindmap.org/](https://forum.openwindmap.org/)) so we can discuss your project.
+Contact us by email (contact@openwindmap.org) so we can discuss your project.
