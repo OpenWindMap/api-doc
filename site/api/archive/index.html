@@ -1,0 +1,1211 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for Openwindmap API">
+      
+      
+        <meta name="author" content="Nicolas Baldeck">
+      
+      
+        <link rel="canonical" href="http://developers.openwindmap.org/api/archive/">
+      
+      
+        <link rel="prev" href="../live/">
+      
+      
+        <link rel="next" href="../push/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
+    
+    
+      
+        <title>Archive - Openwindmap for Devs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#archive-api" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Openwindmap for Devs" class="md-header__button md-logo" aria-label="Openwindmap for Devs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Openwindmap for Devs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Archive
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/bacpluszero/pioupiou-for-devs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Openwindmap for Devs" class="md-nav__button md-logo" aria-label="Openwindmap for Devs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Openwindmap for Devs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/bacpluszero/pioupiou-for-devs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    API
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            API
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../live/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Live
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Archive
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Archive
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    <span class="md-ellipsis">
+      License
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#endpoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      Endpoint
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arguments
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Arguments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dates-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dates format
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#responses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Responses
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Responses">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#response-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Response examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#may-2015-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      May 2015, JSON
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#last-hour-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      Last hour, JSON
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#last-hour-csv" class="md-nav__link">
+    <span class="md-ellipsis">
+      Last hour, csv
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#last-hour-tabulation-separated-text" class="md-nav__link">
+    <span class="md-ellipsis">
+      Last hour, tabulation-separated text
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error codes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jsonp-and-cors" class="md-nav__link">
+    <span class="md-ellipsis">
+      JSONP and CORS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="JSONP and CORS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cross-origin-resource-sharing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cross-Origin Resource Sharing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jsonp" class="md-nav__link">
+    <span class="md-ellipsis">
+      JSONP
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limitations
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../push/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Push
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../widgets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Widgets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-licensing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Licensing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    More
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            More
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Get support
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bug-tracker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bug tracker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribute/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contribute
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    <span class="md-ellipsis">
+      License
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#endpoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      Endpoint
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arguments
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Arguments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dates-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dates format
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#responses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Responses
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Responses">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#response-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Response examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#may-2015-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      May 2015, JSON
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#last-hour-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      Last hour, JSON
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#last-hour-csv" class="md-nav__link">
+    <span class="md-ellipsis">
+      Last hour, csv
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#last-hour-tabulation-separated-text" class="md-nav__link">
+    <span class="md-ellipsis">
+      Last hour, tabulation-separated text
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error codes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jsonp-and-cors" class="md-nav__link">
+    <span class="md-ellipsis">
+      JSONP and CORS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="JSONP and CORS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cross-origin-resource-sharing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cross-Origin Resource Sharing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jsonp" class="md-nav__link">
+    <span class="md-ellipsis">
+      JSONP
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limitations
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="archive-api">Archive API<a class="headerlink" href="#archive-api" title="Permanent link">&para;</a></h1>
+<p>The Archive API provides access to historical measurements from one station.</p>
+<p>A single request can retrieve data for up to 31 days.</p>
+<p>Output format can be either <strong>JSON</strong>, <strong>csv</strong> or tab-separated <strong>text file</strong>.</p>
+<h2 id="license">License<a class="headerlink" href="#license" title="Permanent link">&para;</a></h2>
+<p>To use data from Openwindmap stations, you must comply with the license available on the <a href="../../data-licensing/">Data Licensing</a> page.</p>
+<h2 id="endpoint">Endpoint<a class="headerlink" href="#endpoint" title="Permanent link">&para;</a></h2>
+<pre><code class="language-bash">GET http://api.openwindmap.org/v1/archive/{station_id}?start={start}&amp;stop={stop}&amp;format={format}
+</code></pre>
+<h2 id="arguments">Arguments<a class="headerlink" href="#arguments" title="Permanent link">&para;</a></h2>
+<p>Name | Description |
+-----|----------- |---
+{station_id} | Numeric ID of the station | (Required)
+{start} | Start date (see below) or "<strong>last-hour</strong>"  or "<strong>last-day</strong>" or "<strong>last-week</strong>" or "<strong>last-month</strong>" | (Required)
+{stop} | Stop date (see below) or "<strong>now</strong>" |(Required)
+{format} | Output format : "<strong>json</strong>" (default) or "<strong>csv</strong>" or "<strong>txt</strong>" |(Optionnal)</p>
+<h3 id="dates-format">Dates format<a class="headerlink" href="#dates-format" title="Permanent link">&para;</a></h3>
+<p>Dates and times are specified using the <a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> format. The default timezone is UTC.</p>
+<p>The full representation uses the following format:</p>
+<pre><code>yyyy-MM-ddTHH:mm:ss.SSSZ
+</code></pre>
+<p>The following table shows examples of valid dates and times:</p>
+<table>
+<thead>
+<tr>
+<th>Sample</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2015</td>
+<td>Amounts to 2015-01-01T00:00:00.000Z</td>
+</tr>
+<tr>
+<td>2015-08</td>
+<td>Amounts to 2015-08-01T00:00:00.000Z</td>
+</tr>
+<tr>
+<td>2015-08-23</td>
+<td>Amounts to 2015-08-23T00:00:00.000Z</td>
+</tr>
+<tr>
+<td>2015-08-23T18</td>
+<td>Amounts to 2015-08-23T18:00:00.000Z</td>
+</tr>
+<tr>
+<td>2015-08-23T18:45</td>
+<td>Amounts to 2015-08-23T18:45:00.000Z</td>
+</tr>
+<tr>
+<td>2015-08-23T18:45Z</td>
+<td>Amounts to 2015-08-23T18:45:00.000Z (UTC)</td>
+</tr>
+<tr>
+<td>2015-08-23T18:45+0200</td>
+<td>Amounts to 2015-08-23T18:45:00.000+0200 (Paris, CET − Summer DST)</td>
+</tr>
+<tr>
+<td>2015-01-01T18:45+0100</td>
+<td>Amounts to 2015-01-01T18:45:00.000+0100 (Paris, CET − Winter DST)</td>
+</tr>
+</tbody>
+</table>
+<p>To avoid errors, we recommend to always use UTC dates and times.</p>
+<p>You can directly use date from <a href="http://www.w3schools.com/jsref/jsref_toisostring.asp">Javascript</a>'s <code>new Date().toISOString()</code> or <a href="http://php.net/manual/en/function.date.php">PHP</a>'s <code>date("c")</code>.</p>
+<h2 id="responses">Responses<a class="headerlink" href="#responses" title="Permanent link">&para;</a></h2>
+<p>The <strong>Live</strong> API provides JSON responses.</p>
+<h3 id="response-examples">Response examples<a class="headerlink" href="#response-examples" title="Permanent link">&para;</a></h3>
+<h4 id="may-2015-json">May 2015, JSON<a class="headerlink" href="#may-2015-json" title="Permanent link">&para;</a></h4>
+<pre><code class="language-bash">$ curl &quot;http://api.openwindmap.org/v1/archive/1?start=2015-05&amp;stop=2015-06&quot;
+</code></pre>
+<pre><code class="language-json">{
+  &quot;doc&quot;: &quot;http://developers.openwindmap.org/api/archive/&quot;,
+  &quot;license&quot;: &quot;http://developers.openwindmap.org/data-licensing&quot;,
+  &quot;attribution&quot;: &quot;(c) contributors of the Openwindmap wind network &lt;http://openwindmap.org&gt;&quot;,
+  &quot;legend&quot;: [&quot;time&quot;,&quot;latitude&quot;,&quot;longitude&quot;,&quot;wind_speed_min&quot;,&quot;wind_speed_avg&quot;,&quot;wind_speed_max&quot;,&quot;wind_heading&quot;,&quot;pressure&quot;],
+  &quot;units&quot;: [&quot;utc&quot;,&quot;degrees&quot;,&quot;degrees&quot;,&quot;km/h&quot;,&quot;km/h&quot;,&quot;km/h&quot;,&quot;degrees&quot;,&quot;(deprecated)&quot;],
+  &quot;data&quot;: [
+    [&quot;2015-05-01T00:03:54.000Z&quot;,45.30314,5.906867,3,4,5,45,null],
+    [&quot;2015-05-01T00:07:54.000Z&quot;,45.30314,5.906867,1,2,4,67.5,null],
+    [&quot;2015-05-01T00:11:54.000Z&quot;,45.30314,5.906867,0,0,0,67.5,null],
+    [&quot;2015-05-01T00:15:54.000Z&quot;,45.30314,5.906867,0,0,1,67.5,null],
+    [&quot;2015-05-01T00:19:54.000Z&quot;,45.30314,5.906867,0,0,0,0,null],
+    [&quot;2015-05-01T00:23:54.000Z&quot;,45.30314,5.906867,0,1,4,67.5,null],
+    ...,
+    [&quot;2015-05-31T23:37:03.000Z&quot;,45.30314,5.906867,1,2,2,90,null],
+    [&quot;2015-05-31T23:41:03.000Z&quot;,45.30314,5.906867,0,0,1,90,null],
+    [&quot;2015-05-31T23:45:03.000Z&quot;,45.30314,5.906867,0,1,2,90,null],
+    [&quot;2015-05-31T23:49:03.000Z&quot;,45.30314,5.906867,0,0,1,90,null],
+    [&quot;2015-05-31T23:53:03.000Z&quot;,45.30314,5.906867,0,0,0,90,null],
+    [&quot;2015-05-31T23:57:03.000Z&quot;,45.30314,5.906867,0,0,0,0,null]
+  ]
+}
+</code></pre>
+<h4 id="last-hour-json">Last hour, JSON<a class="headerlink" href="#last-hour-json" title="Permanent link">&para;</a></h4>
+<pre><code class="language-bash">$ curl &quot;http://api.openwindmap.org/v1/archive/110?start=last-hour&amp;stop=now&quot;
+</code></pre>
+<pre><code class="language-json">{
+  &quot;doc&quot;: &quot;http://developers.openwindmap.org/api/archive/&quot;,
+  &quot;license&quot;: &quot;http://developers.openwindmap.org/data-licensing&quot;,
+  &quot;attribution&quot;: &quot;(c) contributors of the Openwindmap wind network &lt;http://openwindmap.org&gt;&quot;,
+  &quot;legend&quot;: [&quot;time&quot;,&quot;latitude&quot;,&quot;longitude&quot;,&quot;wind_speed_min&quot;,&quot;wind_speed_avg&quot;,&quot;wind_speed_max&quot;,&quot;wind_heading&quot;,&quot;pressure&quot;],
+  &quot;units&quot;: [&quot;utc&quot;,&quot;degrees&quot;,&quot;degrees&quot;,&quot;km/h&quot;,&quot;km/h&quot;,&quot;km/h&quot;,&quot;degrees&quot;,&quot;(deprecated)&quot;],
+  &quot;data&quot;: [
+    [&quot;2015-08-18T12:48:23.000Z&quot;,51.368464,3.458852,1,10,17.5,247.5,null],
+    [&quot;2015-08-18T12:52:27.000Z&quot;,51.368464,3.458852,1,10.5,21,247.5,null],
+    [&quot;2015-08-18T12:56:27.000Z&quot;,51.368464,3.458852,7,15,26,247.5,null],
+    [&quot;2015-08-18T13:00:27.000Z&quot;,51.368464,3.458852,9.75,18.5,27,247.5,null],
+    [&quot;2015-08-18T13:04:33.000Z&quot;,51.368464,3.458852,8,17.5,27,247.5,null],
+    [&quot;2015-08-18T13:08:33.000Z&quot;,51.368464,3.458852,8.25,14,21,247.5,null],
+    [&quot;2015-08-18T13:12:33.000Z&quot;,51.368464,3.458852,7.25,14,23,247.5,null],
+    [&quot;2015-08-18T13:16:35.000Z&quot;,51.368464,3.458852,7.25,15.5,22.5,270,null],
+    [&quot;2015-08-18T13:20:35.000Z&quot;,51.368464,3.458852,8.25,17,24.5,247.5,null],
+    [&quot;2015-08-18T13:24:35.000Z&quot;,51.368464,3.458852,8,17,24.5,270,null],
+    [&quot;2015-08-18T13:28:39.000Z&quot;,51.368464,3.458852,9.75,17,24,247.5,null],
+    [&quot;2015-08-18T13:32:39.000Z&quot;,51.368464,3.458852,4.75,14.5,28,247.5,null],
+    [&quot;2015-08-18T13:36:39.000Z&quot;,51.368464,3.458852,6.25,15.5,27.5,247.5,null]
+  ]
+}
+</code></pre>
+<h4 id="last-hour-csv">Last hour, csv<a class="headerlink" href="#last-hour-csv" title="Permanent link">&para;</a></h4>
+<pre><code class="language-bash">$ curl &quot;http://api.openwindmap.org/v1/archive/110?start=last-hour&amp;stop=now&amp;format=csv&quot;
+</code></pre>
+<pre><code class="language-no-highlight">&quot;License&quot;,&quot;http://developers.openwindmap.org/data-licensing&quot;
+&quot;Attribution&quot;,&quot;(c) contributors of the Openwindmap wind network &lt;http://openwindmap.org&gt;&quot;
+&quot;time&quot;,&quot;latitude&quot;,&quot;longitude&quot;,&quot;wind_speed_min&quot;,&quot;wind_speed_avg&quot;,&quot;wind_speed_max&quot;,&quot;wind_heading&quot;,&quot;pressure&quot;
+&quot;utc&quot;,&quot;degrees&quot;,&quot;degrees&quot;,&quot;km/h&quot;,&quot;km/h&quot;,&quot;km/h&quot;,&quot;degrees&quot;,&quot;(deprecated)&quot;
+&quot;2015-08-18T12:48:23.000Z&quot;,51.368464,3.458852,1,10,17.5,247.5,null
+&quot;2015-08-18T12:52:27.000Z&quot;,51.368464,3.458852,1,10.5,21,247.5,null
+&quot;2015-08-18T12:56:27.000Z&quot;,51.368464,3.458852,7,15,26,247.5,null
+&quot;2015-08-18T13:00:27.000Z&quot;,51.368464,3.458852,9.75,18.5,27,247.5,null
+&quot;2015-08-18T13:04:33.000Z&quot;,51.368464,3.458852,8,17.5,27,247.5,null
+&quot;2015-08-18T13:08:33.000Z&quot;,51.368464,3.458852,8.25,14,21,247.5,null
+&quot;2015-08-18T13:12:33.000Z&quot;,51.368464,3.458852,7.25,14,23,247.5,null
+&quot;2015-08-18T13:16:35.000Z&quot;,51.368464,3.458852,7.25,15.5,22.5,270,null
+&quot;2015-08-18T13:20:35.000Z&quot;,51.368464,3.458852,8.25,17,24.5,247.5,null
+&quot;2015-08-18T13:24:35.000Z&quot;,51.368464,3.458852,8,17,24.5,270,null
+&quot;2015-08-18T13:28:39.000Z&quot;,51.368464,3.458852,9.75,17,24,247.5,null
+&quot;2015-08-18T13:32:39.000Z&quot;,51.368464,3.458852,4.75,14.5,28,247.5,null
+&quot;2015-08-18T13:36:39.000Z&quot;,51.368464,3.458852,6.25,15.5,27.5,247.5,null
+</code></pre>
+<h4 id="last-hour-tabulation-separated-text">Last hour, tabulation-separated text<a class="headerlink" href="#last-hour-tabulation-separated-text" title="Permanent link">&para;</a></h4>
+<pre><code class="language-bash">$ curl &quot;http://api.openwindmap.org/v1/archive/110?start=last-hour&amp;stop=now&amp;format=txt&quot;
+</code></pre>
+<pre><code class="language-no-highlight">License:        http://developers.openwindmap.org/data-licensing
+Attribution:    (c) contributors of the Openwindmap wind network &lt;http://openwindmap.org&gt;
+time    latitude        longitude       wind_speed_min  wind_speed_avg  wind_speed_max  wind_heading    pressure
+utc     degrees degrees km/h    km/h    km/h    degrees (deprecated)
+2015-08-18T12:48:23.000Z        51.368464       3.458852        1       10      17.5    247.5   null
+2015-08-18T12:52:27.000Z        51.368464       3.458852        1       10.5    21      247.5   null
+2015-08-18T12:56:27.000Z        51.368464       3.458852        7       15      26      247.5   null
+2015-08-18T13:00:27.000Z        51.368464       3.458852        9.75    18.5    27      247.5   null
+2015-08-18T13:04:33.000Z        51.368464       3.458852        8       17.5    27      247.5   null
+2015-08-18T13:08:33.000Z        51.368464       3.458852        8.25    14      21      247.5   null
+2015-08-18T13:12:33.000Z        51.368464       3.458852        7.25    14      23      247.5   null
+2015-08-18T13:16:35.000Z        51.368464       3.458852        7.25    15.5    22.5    270     null
+2015-08-18T13:20:35.000Z        51.368464       3.458852        8.25    17      24.5    247.5   null
+2015-08-18T13:24:35.000Z        51.368464       3.458852        8       17      24.5    270     null
+2015-08-18T13:28:39.000Z        51.368464       3.458852        9.75    17      24      247.5   null
+2015-08-18T13:32:39.000Z        51.368464       3.458852        4.75    14.5    28      247.5   null
+2015-08-18T13:36:39.000Z        51.368464       3.458852        6.25    15.5    27.5    247.5   null
+</code></pre>
+<h2 id="error-codes">Error codes<a class="headerlink" href="#error-codes" title="Permanent link">&para;</a></h2>
+<p>An <code>HTTP/1.1 200 OK</code> header is sent on successful request.
+HTTP status code other than <code>200</code> means that an error has occured.</p>
+<p>In most cases the application will return a JSON object, including details about the error.</p>
+<pre><code class="language-bash">$ curl -i &quot;http://api.openwindmap.org/v1/archive/999999?start=last-hour&amp;stop=now&quot;
+</code></pre>
+<pre><code class="language-json">HTTP/1.1 404 Not Found
+
+{
+  &quot;error_code&quot;: &quot;station_not_found&quot;,
+  &quot;error_message&quot;: &quot;unable to find station with this {station_id}&quot;
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>error_code</th>
+<th>HTTP code</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>station_not_found</td>
+<td>404</td>
+<td>The requested station is not in the database</td>
+</tr>
+<tr>
+<td>missing_argument</td>
+<td>400</td>
+<td>A query argument is missing</td>
+</tr>
+<tr>
+<td>invalid_argument</td>
+<td>400</td>
+<td>A query argument is invalid</td>
+</tr>
+<tr>
+<td>request_too_large</td>
+<td>413</td>
+<td>You asked for more than 31 days</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Error detection:</p>
+<p>For reliable error detection, your application must monitor the HTTP code instead of the JSON response.</p>
+</div>
+<h2 id="jsonp-and-cors">JSONP and CORS<a class="headerlink" href="#jsonp-and-cors" title="Permanent link">&para;</a></h2>
+<p>The API supports cross-origin requests.</p>
+<h3 id="cross-origin-resource-sharing">Cross-Origin Resource Sharing<a class="headerlink" href="#cross-origin-resource-sharing" title="Permanent link">&para;</a></h3>
+<p>An <code>Access-Control-Allow-Origin: *</code> header is sent with all responses. It means that you can call the API directly from your javascript page.</p>
+<h3 id="jsonp">JSONP<a class="headerlink" href="#jsonp" title="Permanent link">&para;</a></h3>
+<p>When output format is JSON, JSONP is also supported, even if its use is no longer encouraged.</p>
+<p>The name of the callback function must be placed in query string <code>callback</code> argument:</p>
+<pre><code class="language-bash">curl -i &quot;http://api.openwindmap.org/v1/archive/110?start=last-hour&amp;stop=now&amp;callback=myCallBackFunction&quot;
+</code></pre>
+<pre><code class="language-json">HTTP/1.1 200 OK
+Content-Type: text/javascript; charset=utf-8
+
+/**/ typeof myCallBackFunction === 'function' &amp;&amp; myCallBackFunction({
+  &quot;doc&quot;: &quot;http://developers.openwindmap.org/api/archive/&quot;,
+  &quot;license&quot;: &quot;http://developers.openwindmap.org/data-licensing&quot;,
+  &quot;attribution&quot;: &quot;(c) contributors of the Openwindmap wind network &lt;http://openwindmap.org&gt;&quot;,
+  &quot;legend&quot;: [&quot;time&quot;,&quot;latitude&quot;,&quot;longitude&quot;,&quot;wind_speed_min&quot;,&quot;wind_speed_avg&quot;,&quot;wind_speed_max&quot;,&quot;wind_heading&quot;,&quot;pressure&quot;],
+  &quot;units&quot;: [&quot;utc&quot;,&quot;degrees&quot;,&quot;degrees&quot;,&quot;km/h&quot;,&quot;km/h&quot;,&quot;km/h&quot;,&quot;degrees&quot;,&quot;(deprecated)&quot;],
+  &quot;data&quot;: [
+    [&quot;2015-08-18T13:36:39.000Z&quot;,51.368464,3.458852,6.25,15.5,27.5,247.5,null],
+    [&quot;2015-08-18T13:40:48.000Z&quot;,51.368464,3.458852,9,15.5,22.5,247.5,null],
+    [&quot;2015-08-18T13:44:48.000Z&quot;,51.368464,3.458852,7.75,15.5,27,247.5,null],
+    [&quot;2015-08-18T13:48:48.000Z&quot;,51.368464,3.458852,6.5,14,21.5,247.5,null],
+    [&quot;2015-08-18T13:52:47.000Z&quot;,51.368464,3.458852,10,17.5,27.5,247.5,null],
+    [&quot;2015-08-18T13:56:47.000Z&quot;,51.368464,3.458852,6.25,17,25.5,247.5,null],
+    [&quot;2015-08-18T14:00:47.000Z&quot;,51.368464,3.458852,12,18,28,247.5,null],
+    [&quot;2015-08-18T14:04:51.000Z&quot;,51.368464,3.458852,9.75,18.5,26.5,247.5,null],
+    [&quot;2015-08-18T14:08:51.000Z&quot;,51.368464,3.458852,10.5,19.5,30,225,null],
+    [&quot;2015-08-18T14:12:51.000Z&quot;,51.368464,3.458852,8.75,18.5,30.5,247.5,null],
+    [&quot;2015-08-18T14:16:55.000Z&quot;,51.368464,3.458852,7.25,16.5,24.5,247.5,null],
+    [&quot;2015-08-18T14:20:55.000Z&quot;,51.368464,3.458852,12,20,27.5,247.5,null],
+    [&quot;2015-08-18T14:24:55.000Z&quot;,51.368464,3.458852,7.25,16.5,24.5,247.5,null]
+  ]
+});
+</code></pre>
+<h2 id="limitations">Limitations<a class="headerlink" href="#limitations" title="Permanent link">&para;</a></h2>
+<p>Maximum request size is 31 days.
+You can only request data from one station at a time.</p>
+<p>The Archive API might be slower than the other APIs.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2015 Bac Plus Zéro SAS, &copy; 2021-2023 OpenWindMap SCIC SA - This documentation is licensed under  <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC-By 4.0</a>.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+    
+  </body>
+</html>
